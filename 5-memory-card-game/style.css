@@ -1,0 +1,12 @@
+body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; background-color: #2c3e50; color: white; margin-top: 50px; }
+h1 { margin-bottom: 20px; }
+.grid { display: grid; grid-template-columns: repeat(4, 100px); gap: 15px; perspective: 1000px; }
+.card { width: 100px; height: 100px; background-color: #34495e; cursor: pointer; display: flex; justify-content: center; align-items: center; border-radius: 8px; font-size: 2.5rem; transition: transform 0.6s; transform-style: preserve-3d; }
+.card.flip { transform: rotateY(180deg); background-color: #1abc9c; cursor: default; }
+.card.matched { background-color: #e74c3c; cursor: default; opacity: 0.8; }
+/* Hide the text initially by rotating it to the back */
+.card span { display: none; transform: rotateY(180deg); }
+.card.flip span { display: block; }
+.stats { margin-top: 30px; font-size: 1.2rem; display: flex; gap: 30px; }
+button { margin-top: 20px; padding: 10px 20px; font-size: 1.1rem; border: none; border-radius: 5px; background: #f39c12; color: white; cursor: pointer; }
+button:hover { background: #d68910; }

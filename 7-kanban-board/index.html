@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxima Kanban | Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">💠</span>
+                <h1>Proxima <span>Kanban</span></h1>
+            </div>
+            <p>A premium drag-and-drop task management experience.</p>
+        </header>
+
+        <main class="board">
+            
+            <!-- TODO COLUMN -->
+            <div class="column" id="todo-column">
+                <div class="column-header">
+                    <h2>To Do</h2>
+                    <span class="count" id="todo-count">0</span>
+                </div>
+                <div class="task-list" id="todo-list" data-status="todo">
+                    <!-- Tasks injected here -->
+                </div>
+                <div class="add-task-container">
+                    <input type="text" id="todo-input" placeholder="+ Add a new task..." autocomplete="off">
+                </div>
+            </div>
+
+            <!-- IN PROGRESS COLUMN -->
+            <div class="column" id="prog-column">
+                <div class="column-header">
+                    <h2>In Progress</h2>
+                    <span class="count" id="prog-count">0</span>
+                </div>
+                <div class="task-list" id="progress-list" data-status="progress">
+                    <!-- Tasks injected here -->
+                </div>
+            </div>
+
+            <!-- DONE COLUMN -->
+            <div class="column" id="done-column">
+                <div class="column-header">
+                    <h2>Done</h2>
+                    <span class="count" id="done-count">0</span>
+                </div>
+                <div class="task-list" id="done-list" data-status="done">
+                    <!-- Tasks injected here -->
+                </div>
+            </div>
+
+            <!-- TRASH ZONE -->
+            <div class="trash-zone" id="trash-zone">
+                <div class="trash-icon">🗑️</div>
+                <p>Drag here to delete</p>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
